@@ -7,21 +7,26 @@ import Register from './Components/Register'
 import AddBlog from './Pages/AddBlog'
 import Blog from './Pages/Blog'
 import Home from './Pages/Home'
+import BlogListing from './Pages/BlogListing'
+import Editblogs from './Pages/Editblogs'
 
 export default function App() {
   return (
-    <div className='container'>
-    <BrowserRouter>
-    <Navbar/>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/blog/:slug/:id' element={<Blog/>}/>
-      <Route path='/add-blog' element={<AddBlog/>}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/register' element={<Register/>}/>
-    </Routes>
-    <Footer/>
-    </BrowserRouter>  
-    </div>
+    
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/blog/:id' element={<Blog />} />
+          <Route path='/admin-create-blog' element={<AddBlog />} />
+          <Route path='/admin' element={<BlogListing />} />
+          <Route path='/edit-blog/:id' element={<Editblogs />} />
+
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    
   )
 }

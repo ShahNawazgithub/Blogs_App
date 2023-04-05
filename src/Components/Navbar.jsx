@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
   return (
     <>
-
-      <nav className="navbar navbar-expand-lg background navbar-top" style={{ minHeight: 80 }} >
+      <nav className="navbar navbar-expand-lg background navbar-top sticky-top" style={{ minHeight: 80 }} >
         <div className="container-fluid">
           <Link className="navbar-brand text-light" to="/">Blogging App</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,14 +17,9 @@ export default function Navbar() {
                 <Link className="nav-link active text-light" aria-current="page" to="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-light" to="/add-blog">Publish</Link>
+                <Link className="nav-link text-light" to="/login">Create Blog</Link>
               </li>
             </ul>
-            <div className="">
-              <button type="button">
-                <a href="/login">Login/Register</a>
-              </button>
-            </div>
           </div>
         </div>
       </nav>
